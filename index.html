@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>HingHong Trap</title>
+        <meta name="description" content="Paste Youtube video links and listen to them on this site with customizable settings!">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div id='bg'>
+            <div id='setting'>
+                <a class='close' id='sclose'>&times;</a>
+                <p id='cs'>Choose song: <input type='file' id='songupload' accept = 'audio/*'/></p>
+                <hr>
+                <p>Volume: <a id='cv'></a> <br><input type="range" min="0" max="100" value="100" id='volume'></p>
+                <hr>
+                <p id='loop'>Loop Song</p>
+            </div>
+        </div>
+
+        <div id='container'>
+            <div id='settings'><i class="fa fa-cog"></i></div>
+            <div id='main'>
+                <canvas id='canvas1'></canvas>
+                <div id='logo'></div>
+            </div>
+            <div id='MAREA'>
+                <i id='player' class="fas fa-play"></i>
+                <p id='nplaying'>Now playing: </p>
+            </div>
+        </div>
+        
+        <script src="main.js" async defer></script>
+    </body>
+</html>

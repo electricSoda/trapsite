@@ -1,0 +1,180 @@
+body {
+    background-image: url('bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow:hidden;
+}
+
+
+.shake {
+    animation: shake 0.4s;
+}
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+  
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+#logo {
+    text-align: center;
+    border-style: solid;
+    border-width: 4px;
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -150px;
+    background-image: url("trapnation.jpg");
+    background-size: 300px;
+    z-index: 2;
+}
+
+#canvas1 {
+    height: 600px;
+    width: 700px;
+    margin-top: 75px;
+    margin-left: 5px;
+    z-index:3;
+}
+
+
+/* settings */
+#settings {
+    padding: 10px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    font-size:20px;
+    z-index: 2;
+}
+
+#settings:hover > i {
+    cursor: pointer;
+    animation: spin 2s linear infinite;
+}
+
+#bg {
+    display: none;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0.5, 0.5, 0.5, 0.5);
+    z-index: 3;
+}
+
+#setting {
+    display: none;
+    width: 75%;
+    height: 75%;
+    background: white;
+    margin: auto;
+    border-radius: 10px;
+    animation: in 1s forwards;
+}
+
+#setting p {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#songupload:hover {
+    cursor: pointer;
+}
+
+#volume:hover {
+    cursor: pointer;
+}
+
+#loop:hover {
+    cursor: pointer;
+    color: grey;
+}
+
+.close {
+    font-size: 75px;
+}
+
+.close:hover {
+    cursor: pointer;
+}
+
+@keyframes in {
+    from {
+        margin-top: 0;
+    }
+    to {
+        margin-top: 100px;
+    }
+}
+
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg) scale(2);
+    }
+    to {
+        transform: rotate(360deg) scale(2);
+    }
+}
+
+#MAREA {
+    position: absolute;
+    top: 80%;
+    text-align: center;
+}
+
+#player {
+    font-size: 50px;
+    padding-bottom: 20px;
+}
+
+#player:hover {
+    cursor: pointer;
+    color: rgb(53, 116, 124);
+}
+
+#nplaying {
+    font-size: 2vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+/* light theme */
+.light {
+    color: white;
+    border-color: white;
+}
+
+/* dark theme */
+.dark {
+    color: black;
+    border-color: black;
+}
